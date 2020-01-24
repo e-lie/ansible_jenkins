@@ -1,0 +1,6 @@
+- hosts: all
+  tasks:
+    - name: display jenkins build tag
+      debug: msg="{{ lookup('env','BUILD_TAG') }}"
+    - name: ping lxd infra
+      ping:
